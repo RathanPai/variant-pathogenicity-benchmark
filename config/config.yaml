@@ -1,0 +1,42 @@
+# Project Configuration
+
+project:
+  name: "BioInformatics QML"
+  seed: 42
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  models_dir: "models"
+  results_dir: "results"
+
+data:
+  clinvar_dataset: "data/raw/clinvar_dataset.tsv"
+  clinvar_clean: "data/processed/clinvar_clean.csv"
+  clinvar_gnomad: "data/processed/clinvar_gnomad.csv"
+  clinvar_vcf: "data/processed/clinvar_all.vcf"
+  clinvar_vep: "data/processed/clinvar_vep_features.csv"
+  uniprot_features: "data/processed/uniprot_protein_features.csv"
+  variant_features: "data/processed/variant_features.csv"
+  variant_features_engineered: "data/processed/variant_features_engineered.csv"
+  variant_features_cleaned: "data/processed/variant_features_cleaned.csv"
+  
+  train_data: "data/processed/train.csv"
+  val_data: "data/processed/validation.csv"
+  test_data: "data/processed/test.csv"
+
+preprocessing:
+  test_size: 0.15
+  val_size: 0.15
+
+quantum:
+  n_qubits: 4
+  n_layers: 2
+  learning_rate: 0.01
+  epochs: 50
+  batch_size: 32
+
+classical:
+  rf_estimators: 100
+  xgb_estimators: 100
+  xgb_max_depth: 6
